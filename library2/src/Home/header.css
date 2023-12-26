@@ -1,0 +1,83 @@
+@media screen and (min-width: 1200px) {
+	.welcome-banner {
+	  text-align: center;
+	  display: flex;
+	  min-height: 100vh;
+	  align-items: center;
+	  justify-content: center;
+	  color: white;
+	}
+  }
+
+
+/* @media screen and (min-width: 1200px) {
+	.nav {
+		text-align: center;
+		display: flex;
+		min-height: 15vh;
+		align-items: center;
+		justify-content: center;
+		color: white;
+	}
+} */
+
+
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /* To evenly distribute items in a row */
+	margin: 0 auto;
+	max-width: 1200px; /* Adjust as needed */
+  }
+  
+  .card {
+	flex: 0 0 calc(25% - 20px); /* Adjust width as per your layout */
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	overflow: hidden;
+	margin: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+  }
+  
+  /* Card content styles */
+  .card-content {
+	padding: 15px;
+  }
+  
+  /* Card title styles */
+  .card-title {
+	margin-top: 0;
+	font-size: 1.5rem;
+  }
+  
+  /* Card information styles */
+  .card-info {
+	margin-bottom: 5px;
+  }
+  
+  .card-link {
+	text-decoration: none;
+	color: #007bff;
+	font-weight: bold;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 1200px) {
+	.card {
+	  flex-basis: calc(33.33% - 20px); /* Three items in a row */
+	}
+  }
+  
+  @media screen and (max-width: 900px) {
+	.card {
+	  flex-basis: calc(50% - 20px); /* Two items in a row */
+	}
+  }
+  
+  @media screen and (max-width: 600px) {
+	.card {
+	  flex-basis: calc(100% - 20px); /* Single item in a row */
+	}
+  }
+  
