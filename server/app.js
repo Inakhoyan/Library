@@ -62,7 +62,7 @@ app.get("/user", (req, res) => {
 
 // app.get("/use1", getUserInfo); // Using the getUserInfo function for the '/user' route
 
-const port = 9000;
+const port = 7000;
 
 app.listen(port, (error) => {
   error
