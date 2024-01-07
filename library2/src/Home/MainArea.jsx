@@ -3,23 +3,31 @@ import  { useEffect, useState } from "react";
 import axios from "axios";
 import "./header.css";
 import { Link } from "react-router-dom";
+// import { useParams } from 'react-router-dom';
 
-export const MainArea = () => {
+export const MainArea = ({ category }) => {
 
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
 	  const fetchData = async () => {
 		try {
-		  const response = await axios.get("http://localhost:9000/user");
+		  const apiUrl = category === 'all' ? 'http://localhost:9000/user' : `http://localhost:9000/user/${category}`;
+
+		  const response = await axios.get(apiUrl);
 		  setData(response.data); // Parsing response.data, assuming it's JSON
+		// console.log( data.filter(book => book.category.includes('Math')));
+		  
+		  console.log(response.data)
 		} catch (error) {
 		  console.log("Error fetching data:", error);
 		}
 	  };
-  
+
 	  fetchData();
-	}, []);
+	}, [category]);
+
+	
 
   return (
     <main>
@@ -32,19 +40,7 @@ export const MainArea = () => {
   </div>
 </div>
 
-      {/* Featured Books */}
-      {/* Grid layout with books */}
-
-      {/* Recent Additions */}
-      {/* Carousel layout with books */}
-
 					<h2 className="featured-books" style={{ marginTop: '230px', marginLeft: '1000px'}}>Featured Books</h2><br />
-					{/* <div className="books-grid">
-						{/* Individual book items */}
-					{/* </div>
-						<div className="book-item">
-						{/* Book details: image, title, author */}
-						{/* </div> */} 
 
 
 						{/* Repeat book items for other featured books */}
@@ -55,14 +51,17 @@ export const MainArea = () => {
 							<div  className="card"key={index}>
 
 							{/* <img src="\" alt="Placeholder" class="card-img"> */}
+
+
 								<div className="card-content">
+								<img src={d.cover_url} alt="" className='img' />
 								<h3 className="card-title">{d.title}</h3>
-								<p className="card-info">ISBN: <span className="isbn">{d.isbn}</span></p>
+								<p className="card-info">category: <span className="isbn">{d.category}</span></p>
 								<p className="card-info">Published Year: {d.published_year} <span className="published-year">Year</span></p>
 								<p className="card-info">Category: {d.category} <span className="category">Category</span></p>
 								<Link to="/" className="card-link">Read More</Link>
-
-							</div>
+								
+								</div>
 
 							{/* {console.log(d)} */}
 							</div>
@@ -71,15 +70,8 @@ export const MainArea = () => {
 
 			{/* Recent Additions */}
 			<div className="recent-additions" style={{ marginTop: '330px',borderBottom: '1px solid white'}}>
-			<h2 style={{ marginLeft: '960px'}}>Recent Additions</h2>
-			<div className="carousel">
-				{/* Navigation arrows */}
-				{/* Book carousel items */}
-				<div className="carousel-item">
-				{/* Book details: image, title */}
-				</div>
-				{/* Repeat carousel items for other recent additions */}
-			</div>
+					<h2 style={{ marginLeft: '960px'}}>Recent Additions</h2>
+			
 			</div>
     </main>
   );

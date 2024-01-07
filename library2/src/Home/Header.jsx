@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Catalog } from "../Catalog/Catalog";
-import {MainArea} from '../Home/MainArea';
-import {Fotter} from '../Home/Fotter';
+// import { MainArea } from '../Home/MainArea';
+import { Fotter } from '../Home/Fotter';
 
 import { Login } from "../Login/Login";
 import { Register } from "../Login/Register";
@@ -23,12 +23,14 @@ export const Header = () => {
 		setCurrentTab(tab);	
 	}
 
+
+
 return ( 
     <>  
       <footer style={{ color: 'white', backgroundImage: 'linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D)' }}>
         <div className="logo">
           {/* Insert academy's logo */}
-          <img src="logo.png" alt="Academy Logo" style={{ maxHeight: '50px', marginLeft: '1050px' }}/>
+          <img src="https://play-lh.googleusercontent.com/gRheGVxu9Ygc4lIc71bVSgjGNiZ8d-nraBqGFRm1SV-2CsD-byiqzt_8m8y8tJqyLXc" alt="Academy Logo" style={{ maxHeight: '50px', marginLeft: '1050px' }}/>
         </div>
         <nav className="NaV">
           <ul style={{ listStyle: 'none', display: 'flex', marginLeft: '1750px' }}>
@@ -38,7 +40,7 @@ return (
                 onClick={() => handleTabChange('Home')} 
                 style={{ color: 'white', fontSize: '16px', textDecoration: 'none' }}>
                 	Home
-				<Catalog />
+				{/* <Catalog /> */}
               </Link>
             </li>
             <li>
@@ -54,7 +56,8 @@ return (
         </nav>
 	  {currentTab === 'Home' && (
 		<>
-		  <MainArea />
+		{/* <MainArea /> */}
+		<Catalog />
 		  <Fotter />
 		</>
 	  )}
