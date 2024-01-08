@@ -1,0 +1,219 @@
+@media screen and (min-width: 1200px) {
+	.welcome-banner {
+	  text-align: center;
+	  display: flex;
+	  min-height: 100vh;
+	  align-items: center;
+	  justify-content: center;
+	  color: white;
+	}
+  }
+
+
+/* @media screen and (min-width: 1200px) {
+	.nav {
+		text-align: center;
+		display: flex;
+		min-height: 15vh;
+		align-items: center;
+		justify-content: center;
+		color: white;
+	}
+} */
+
+
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /* To evenly distribute items in a row */
+	margin: 0 auto;
+	max-width: 1200px; /* Adjust as needed */
+  }
+  
+  .card {
+	flex: 0 0 calc(25% - 20px); /* Adjust width as per your layout */
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	overflow: hidden;
+	margin: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+  }
+  
+  /* Card content styles */
+  .card-content {
+	padding: 15px;
+  }
+  
+  /* Card title styles */
+  .card-title {
+	margin-top: 0;
+	font-size: 1.5rem;
+  }
+  
+  /* Card information styles */
+  .card-info {
+	margin-bottom: 5px;
+  }
+  
+  .card-link {
+	text-decoration: none;
+	color: #007bff;
+	font-weight: bold;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 1200px) {
+	.card {
+	  flex-basis: calc(33.33% - 20px); /* Three items in a row */
+	}
+  }
+  
+  @media screen and (max-width: 900px) {
+	.card {
+	  flex-basis: calc(50% - 20px); /* Two items in a row */
+	}
+  }
+  
+  @media screen and (max-width: 600px) {
+	.card {
+	  flex-basis: calc(100% - 20px); /* Single item in a row */
+	}
+  }
+  
+  .img{
+	  width: 100%;
+  }
+
+/* CSS for card content with hover effect and animation */
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; /* Adjust the gap between cards */
+	justify-content: center;
+  }
+  
+  .card {
+	width: 300px; /* Set your card width */
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+	transform: translateY(-5px);
+  }
+  
+  .card-content {
+	padding: 20px;
+  }
+  
+  .img {
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #eee; /* Optional border for the image */
+	margin-bottom: 15px; /* Adjust as needed */
+  }
+  
+  .card-title {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+  }
+  
+  .card-info {
+	font-size: 0.9em;
+	margin-bottom: 5px;
+  }
+  
+  .card-link {
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+	text-decoration: none;
+	color: #333;
+	background-color: #f0f0f0;
+	padding: 8px 12px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .card-link:hover {
+	background-color: #ddd;
+  }
+  
+
+  .card {
+	/* Existing styles... */
+	background-color: #fff; /* Default background color */
+	transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .card:hover {
+	transform: translateY(-5px);
+	background-color: #f5f5f5; /* Change the background color on hover */
+  }
+
+  .card-title {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #333; /* Text color for the title */
+  }
+  
+  .card-info {
+	font-size: 0.9em;
+	margin-bottom: 5px;
+	color: #666; /* Text color for the info */
+  }
+  
+  .isbn,
+  .published-year,
+  .category {
+	font-weight: bold;
+	color: #007bff; /* Text color for specific info elements like ISBN, Published Year, Category */
+  }
+  
+  .card-link {
+	/* Existing styles... */
+	color: #fff; /* Text color for the link */
+	background-color: #007bff; /* Background color for the link */
+  }
+  
+  .card-link:hover {
+	background-color: #0056b3; /* Adjusted background color on hover for the link */
+  }
+  
+
+
+
+
+  .card-title {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: rgb(116, 57, 219); /* Text color for the title */
+  }
+  
+  .card-info {
+	font-size: 0.9em;
+	margin-bottom: 5px;
+	color: rgb(198, 111, 188); /* Text color for the info */
+  }
+  
+  .isbn,
+  .published-year,
+  .category {
+	font-weight: bold;
+	color: rgb(247, 148, 77); /* Text color for specific info elements like ISBN, Published Year, Category */
+  }
+  
+  .card-link {
+	/* Existing styles... */
+	color: #fff; /* Text color for the link */
+	background-color: rgb(247, 148, 77); /* Background color for the link */
+  }
+  
+  .card-link:hover {
+	background-color: rgba(247, 148, 77, 0.8); /* Adjusted background color on hover for the link */
+  }
+  
